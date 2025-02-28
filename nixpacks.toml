@@ -3,7 +3,7 @@ nixPkgs = [
   "...",
   "python311Packages.supervisor",
   # Fix for coollabsio/coolify/issues/4202 (LICENSE file collision)
-  '(lib.recursiveUpdate php81Packages.composer { meta.priority = php81Packages.composer.meta.priority or 0 -1; })',
+  '(lib.recursiveUpdate php82Packages.composer { meta.priority = php82Packages.composer.meta.priority or 0 -1; })',
 
 ]
 
