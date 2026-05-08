@@ -35,6 +35,15 @@
     <!-- OpenSearch -->
     <link rel="search" type="application/opensearchdescription+xml" title="{{ setting('app-name') }}" href="{{ url('/opensearch.xml') }}">
 
+    <!-- Analytics -->
+    @if(app()->isProduction() && config('analytics.umami_website_id'))
+        <script
+            defer
+            src="https://analytics.veganhacktivists.org/script.js"
+            data-website-id="{{ config('analytics.umami_website_id') }}">
+        </script>
+    @endif
+
     <!-- Custom Styles & Head Content -->
     @include('layouts.parts.custom-styles')
     @include('layouts.parts.custom-head')
