@@ -36,12 +36,13 @@
     <link rel="search" type="application/opensearchdescription+xml" title="{{ setting('app-name') }}" href="{{ url('/opensearch.xml') }}">
 
     <!-- Analytics -->
-    @if(app()->isProduction() && config('analytics.umami_website_id'))
+    @if(app()->isProduction() && config('analytics.umami_website_id') && ($cspNonce ?? false))
         <script
-            defer
+            data-website-id="{{ config('analytics.umami_website_id') }}"
             src="https://analytics.veganhacktivists.org/script.js"
-            data-website-id="{{ config('analytics.umami_website_id') }}">
-        </script>
+            nonce="{{ $cspNonce }}"
+            defer
+        ></script>
     @endif
 
     <!-- Custom Styles & Head Content -->
