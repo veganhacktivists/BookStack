@@ -23,7 +23,7 @@
     "@lezer/generator": "^1.7.2",
     "@types/sortablejs": "^1.15.8",
     "chokidar-cli": "^3.0",
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.28.1",
     "eslint": "^9.21.0",
     "eslint-plugin-import": "^2.31.0",
     "jest": "^29.7.0",
